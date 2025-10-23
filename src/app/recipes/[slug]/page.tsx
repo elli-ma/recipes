@@ -6,10 +6,11 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Printer, Share2, Clock, Users, ChefHat } from "lucide-react";
-import { useEffect } from "react";
+import React, { useEffect, use } from "react";
 
-export default function RecipePage({ params }: { params: { slug: string } }) {
-  const recipe = recipes.find((r) => r.id === parseInt(params.slug));
+export default function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = use(params);
+  const recipe = recipes.find((r) => r.id === parseInt(slug));
 
   useEffect(() => {
     if (recipe) {

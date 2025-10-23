@@ -35,7 +35,7 @@ export function RecipeCards() {
               <CardDescription>{recipe.description}</CardDescription>
             </CardHeader>
             <CardContent>
-              <div className="flex items-center gap-4 text-sm text-gray-600">
+              <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
                 <div className="flex items-center gap-1">
                   <Clock className="h-4 w-4" />
                   <span>{recipe.prepTime + recipe.cookTime} мин</span>
@@ -45,6 +45,9 @@ export function RecipeCards() {
                   <span>{recipe.servings} порций</span>
                 </div>
               </div>
+              {recipe.note && (
+                <p className="text-xs text-green-700 italic font-medium">{recipe.note}</p>
+              )}
             </CardContent>
             <CardFooter>
               <Link href={`/recipes/${recipe.id}`} className="w-full">
