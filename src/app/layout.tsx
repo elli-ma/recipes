@@ -13,8 +13,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "How to Cook - Вкусные рецепты для каждого дня",
-  description: "Простые и вкусные рецепты для каждого дня. Готовьте с удовольствием!",
+  title: "Family Cook - Семейные рецепты для каждого дня",
+  description: "Домашние рецепты нашей большой семьи: бабушек, мамы, тёти, сестры и брата. Проверенные временем и любовью семейные традиции.",
 };
 
 export default function RootLayout({

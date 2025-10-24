@@ -15,12 +15,14 @@ import { Button } from "@/components/ui/button";
 import { Clock, Users } from "lucide-react";
 
 export function RecipeCards() {
-  return (
-    <section className="">
-      <h2 className="text-3xl font-bold mb-8 text-green-900 uppercase">Популярные рецепты</h2>
+  const popularRecipes = recipes.filter((recipe) => recipe.popular);
 
-      <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-        {recipes.map((recipe) => (
+  return (
+    <section className="px-4 md:px-0">
+      <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-green-900 uppercase">Популярные рецепты</h2>
+
+      <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {popularRecipes.map((recipe) => (
           <Card key={recipe.id} className="overflow-hidden">
             <div className="relative h-48 w-full">
               <Image
@@ -30,28 +32,28 @@ export function RecipeCards() {
                 className="object-cover"
               />
             </div>
-            <CardHeader>
-              <CardTitle>{recipe.title}</CardTitle>
-              <CardDescription>{recipe.description}</CardDescription>
+            <CardHeader className="p-4">
+              <CardTitle className="text-lg md:text-xl">{recipe.title}</CardTitle>
+              <CardDescription className="text-sm line-clamp-2">{recipe.description}</CardDescription>
             </CardHeader>
-            <CardContent>
-              <div className="flex items-center gap-4 text-sm text-gray-600 mb-2">
+            <CardContent className="p-4 pt-0">
+              <div className="flex flex-wrap items-center gap-3 md:gap-4 text-xs md:text-sm text-gray-600 mb-2">
                 <div className="flex items-center gap-1">
-                  <Clock className="h-4 w-4" />
+                  <Clock className="h-3 w-3 md:h-4 md:w-4" />
                   <span>{recipe.prepTime + recipe.cookTime} мин</span>
                 </div>
                 <div className="flex items-center gap-1">
-                  <Users className="h-4 w-4" />
+                  <Users className="h-3 w-3 md:h-4 md:w-4" />
                   <span>{recipe.servings} порций</span>
                 </div>
               </div>
               {recipe.note && (
-                <p className="text-xs text-green-700 italic font-medium">{recipe.note}</p>
+                <p className="text-xs text-green-700 italic font-medium line-clamp-1">{recipe.note}</p>
               )}
             </CardContent>
-            <CardFooter>
-              <Link href={`/recipes/${recipe.id}`} className="w-full">
-                <Button variant="outline" className="w-full shadow-none">
+            <CardFooter className="p-4 pt-0">
+              <Link href={`/recipes/${recipe.slug}`} className="w-full">
+                <Button variant="outline" className="w-full shadow-none text-sm">
                   Смотреть рецепт
                 </Button>
               </Link>

@@ -1,9 +1,9 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Контакты - How to Cook",
-  description: "Свяжитесь с нами! Есть вопросы или предложения? Мы будем рады услышать от вас. Контактная информация How to Cook.",
-  keywords: "контакты, связаться, how to cook, обратная связь",
+  title: "Контакты - Family Cook",
+  description: "Свяжитесь с нами! Есть вопросы или предложения? Мы будем рады услышать от вас. Контактная информация Family Cook.",
+  keywords: "контакты, связаться, family cook, обратная связь",
 };
 
 export default function ContactsLayout({

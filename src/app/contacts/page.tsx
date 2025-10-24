@@ -21,34 +21,34 @@ export default function Contacts() {
   };
 
   return (
-    <div className="py-8">
+    <div className="py-6 md:py-8 px-4 md:px-0">
       <Breadcrumbs items={breadcrumbItems} />
       
       <div>
-        <h1 className="text-4xl font-bold mb-6 text-green-900 uppercase">Свяжитесь с нами</h1>
-        <p className="text-gray-600 mb-12">
+        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-green-900 uppercase">Свяжитесь с нами</h1>
+        <p className="text-gray-600 mb-8 md:mb-12 text-sm md:text-base">
           Есть вопросы или предложения? Мы будем рады услышать от вас!
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
           {/* Contact Form */}
           <Card>
             <CardHeader>
-              <CardTitle className="uppercase">Отправить сообщение</CardTitle>
+              <CardTitle className="uppercase text-lg md:text-xl">Отправить сообщение</CardTitle>
             </CardHeader>
             <CardContent>
-              <form onSubmit={handleSubmit} className="space-y-4">
+              <form onSubmit={handleSubmit} className="space-y-3 md:space-y-4">
                 <div>
                   <Label htmlFor="name" className="uppercase text-xs font-semibold">Имя</Label>
-                  <Input id="name" placeholder="Ваше имя" required />
+                  <Input id="name" placeholder="Ваше имя" required className="text-sm md:text-base" />
                 </div>
                 <div>
                   <Label htmlFor="email" className="uppercase text-xs font-semibold">Email</Label>
-                  <Input id="email" type="email" placeholder="your@email.com" required />
+                  <Input id="email" type="email" placeholder="your@email.com" required className="text-sm md:text-base" />
                 </div>
                 <div>
                   <Label htmlFor="subject" className="uppercase text-xs font-semibold">Тема</Label>
-                  <Input id="subject" placeholder="Тема сообщения" required />
+                  <Input id="subject" placeholder="Тема сообщения" required className="text-sm md:text-base" />
                 </div>
                 <div>
                   <Label htmlFor="message" className="uppercase text-xs font-semibold">Сообщение</Label>
@@ -56,10 +56,11 @@ export default function Contacts() {
                     id="message" 
                     placeholder="Ваше сообщение..." 
                     rows={5}
-                    required 
+                    required
+                    className="text-sm md:text-base" 
                   />
                 </div>
-                <Button type="submit" className="w-full bg-green-900 hover:bg-green-800 text-white font-semibold uppercase">
+                <Button type="submit" className="w-full bg-green-900 hover:bg-green-800 text-white font-semibold uppercase text-sm md:text-base">
                   Отправить
                 </Button>
               </form>
@@ -70,16 +71,16 @@ export default function Contacts() {
           <div className="space-y-6">
             <Card>
               <CardHeader>
-                <CardTitle className="uppercase">Контактная информация</CardTitle>
+                <CardTitle className="uppercase text-lg md:text-xl">Контактная информация</CardTitle>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-3 md:space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="bg-green-900 p-2 rounded-full">
                     <Mail className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold uppercase text-sm">Email</h3>
-                    <p className="text-gray-600">info@howtocook.com</p>
+                    <h3 className="font-semibold uppercase text-xs md:text-sm">Email</h3>
+                    <p className="text-gray-600 text-sm md:text-base">info@howtocook.com</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -87,8 +88,8 @@ export default function Contacts() {
                     <Phone className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold uppercase text-sm">Телефон</h3>
-                    <p className="text-gray-600">+7 (123) 456-78-90</p>
+                    <h3 className="font-semibold uppercase text-xs md:text-sm">Телефон</h3>
+                    <p className="text-gray-600 text-sm md:text-base">+7 (123) 456-78-90</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -96,18 +97,18 @@ export default function Contacts() {
                     <MapPin className="h-4 w-4 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold uppercase text-sm">Адрес</h3>
-                    <p className="text-gray-600">Москва, Россия</p>
+                    <h3 className="font-semibold uppercase text-xs md:text-sm">Адрес</h3>
+                    <p className="text-gray-600 text-sm md:text-base">Москва, Россия</p>
                   </div>
                 </div>
               </CardContent>
             </Card>
 
             <Card className="bg-gray-100">
-              <CardContent className="pt-6">
-                <h3 className="font-semibold mb-2 uppercase">Часы работы</h3>
-                <p className="text-gray-700">Понедельник - Пятница: 9:00 - 18:00</p>
-                <p className="text-gray-700">Суббота - Воскресенье: Выходной</p>
+              <CardContent className="pt-4 md:pt-6">
+                <h3 className="font-semibold mb-2 uppercase text-sm md:text-base">Часы работы</h3>
+                <p className="text-gray-700 text-sm md:text-base">Понедельник - Пятница: 9:00 - 18:00</p>
+                <p className="text-gray-700 text-sm md:text-base">Суббота - Воскресенье: Выходной</p>
               </CardContent>
             </Card>
           </div>

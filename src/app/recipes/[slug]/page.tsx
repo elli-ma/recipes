@@ -10,11 +10,11 @@ import React, { useEffect, use } from "react";
 
 export default function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
-  const recipe = recipes.find((r) => r.id === parseInt(slug));
+  const recipe = recipes.find((r) => r.slug === slug);
 
   useEffect(() => {
     if (recipe) {
-      document.title = `${recipe.title} - How to Cook`;
+      document.title = `${recipe.title} - Family Cook`;
       const metaDescription = document.querySelector('meta[name="description"]');
       if (metaDescription) {
         metaDescription.setAttribute('content', `${recipe.description}. Время приготовления: ${recipe.prepTime + recipe.cookTime} минут. Порций: ${recipe.servings}.`);
@@ -55,7 +55,7 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
   };
 
   return (
-    <div className="py-8">
+    <div className="py-6 md:py-8 px-4 md:px-0">
       <Breadcrumbs items={breadcrumbItems} />
      
         <Image
@@ -63,56 +63,56 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
           alt={recipe.title}
           width={800}
           height={400}
-          className="w-full h-64 object-cover rounded-lg"
+          className="w-full h-48 md:h-64 object-cover rounded-lg"
         />
-        <div className="py-6">
-          <div className="flex items-start justify-between mb-4">
+        <div className="py-4 md:py-6">
+          <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
             <div className="flex-1">
               <div className="flex items-center gap-2 mb-2">
-                <Badge className="bg-gray-100 text-green-700 hover:bg-green-100 uppercase">
+                <Badge className="bg-gray-100 text-green-700 hover:bg-green-100 uppercase text-xs md:text-sm">
                   {recipe.category}
                 </Badge>
               </div>
-              <h1 className="text-3xl font-bold mb-2 uppercase text-green-900">{recipe.title}</h1>
-              <p className="text-gray-600">{recipe.description}</p>
+              <h1 className="text-2xl md:text-3xl font-bold mb-2 uppercase text-green-900">{recipe.title}</h1>
+              <p className="text-gray-600 text-sm md:text-base">{recipe.description}</p>
             </div>
             <div className="flex gap-2 print:hidden">
-              <Button variant="outline" size="icon" onClick={handlePrint}>
+              <Button variant="outline" size="icon" onClick={handlePrint} className="h-9 w-9 md:h-10 md:w-10">
                 <Printer className="h-4 w-4" />
               </Button>
-              <Button variant="outline" size="icon" onClick={handleShare}>
+              <Button variant="outline" size="icon" onClick={handleShare} className="h-9 w-9 md:h-10 md:w-10">
                 <Share2 className="h-4 w-4" />
               </Button>
             </div>
           </div>
 
-          <div className="flex items-center gap-6 mb-6 text-gray-600">
+          <div className="flex flex-wrap items-center gap-3 md:gap-6 mb-4 md:mb-6 text-gray-600 text-sm md:text-base">
             <div className="flex items-center gap-2">
-              <Clock className="h-5 w-5" />
+              <Clock className="h-4 w-4 md:h-5 md:w-5" />
               <span>Подготовка: {recipe.prepTime} мин</span>
             </div>
             <div className="flex items-center gap-2">
-              <ChefHat className="h-5 w-5" />
+              <ChefHat className="h-4 w-4 md:h-5 md:w-5" />
               <span>Готовка: {recipe.cookTime} мин</span>
             </div>
             <div className="flex items-center gap-2">
-              <Users className="h-5 w-5" />
+              <Users className="h-4 w-4 md:h-5 md:w-5" />
               <span>{recipe.servings} порций</span>
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-6">
             <div>
-              <h2 className="text-xl font-semibold mb-3 uppercase">Ингредиенты</h2>
-              <ul className="list-disc list-inside space-y-2">
+              <h2 className="text-lg md:text-xl font-semibold mb-3 uppercase">Ингредиенты</h2>
+              <ul className="list-disc list-inside space-y-2 text-sm md:text-base">
                 {recipe.ingredients.map((ingredient, index) => (
                   <li key={index}>{ingredient}</li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-xl font-semibold mb-3 uppercase">Подробности</h2>
-              <div className="flex flex-col space-y-2">
+              <h2 className="text-lg md:text-xl font-semibold mb-3 uppercase">Подробности</h2>
+              <div className="flex flex-col space-y-2 text-sm md:text-base">
                 <p><strong>Подготовка:</strong> {recipe.prepTime} минут</p>
                 <p><strong>Готовка:</strong> {recipe.cookTime} минут</p>
                 <p><strong>Порций:</strong> {recipe.servings}</p>
@@ -122,10 +122,10 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
           </div>
 
           <div className="mb-6">
-            <h2 className="text-xl font-semibold mb-3 uppercase">Техника приготовления</h2>
-            <ol className="list-decimal list-inside space-y-3">
+            <h2 className="text-lg md:text-xl font-semibold mb-3 uppercase">Техника приготовления</h2>
+            <ol className="list-decimal list-inside space-y-3 text-sm md:text-base">
               {recipe.instructions.map((instruction, index) => (
-                <li key={index}>{instruction}</li>
+                <li key={index} className="leading-relaxed">{instruction}</li>
               ))}
             </ol>
           </div>

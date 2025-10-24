@@ -22,10 +22,10 @@ export function Header() {
   return (
     <header className="bg-white sticky top-0 z-50 border-b border-gray-200">
   
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full items-center justify-between px-4 md:px-6 flex ">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full items-center justify-between flex">
 
-        <Link href="/" prefetch={false} className="">
-          <img className="h-16" src="/logo.svg" alt="Logo" />
+        <Link href="/" prefetch={false} className="flex-shrink-0">
+          <img className="h-12 md:h-16" src="/logo.svg" alt="Logo" />
         </Link>
  
       <div className="hidden md:flex uppercase">
@@ -54,13 +54,14 @@ export function Header() {
             <span className="sr-only">Toggle navigation menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="right">
-          <div className="grid gap-4 p-4">
+        <SheetContent side="right" className="w-[280px] sm:w-[350px]">
+          <div className="flex flex-col gap-6 mt-8">
+            <div className="text-xl font-bold text-green-900 uppercase mb-4">Меню</div>
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}
                 href={href}
-                className="flex items-center gap-2 text-lg font-medium"
+                className="flex items-center gap-2 text-lg font-medium hover:text-green-900 transition-colors uppercase border-b border-gray-100 pb-3"
                 prefetch={false}
               >
                 {label}
