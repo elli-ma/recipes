@@ -1,12 +1,20 @@
 "use client";
 
+import { use, useEffect } from "react";
 import { recipes } from "@/lib/recipes";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Printer, Share2, Clock, Users, ChefHat } from "lucide-react";
-import React, { useEffect, use } from "react";
+import React from "react";
+
+// Generate static params for all recipes
+export function generateStaticParams() {
+  return recipes.map((recipe) => ({
+    slug: recipe.slug,
+  }));
+}
 
 export default function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = use(params);
