@@ -15,6 +15,28 @@ const montserrat = Montserrat({
 export const metadata: Metadata = {
   title: "Family Cook - Семейные рецепты для каждого дня",
   description: "Домашние рецепты нашей большой семьи: бабушек, мамы, тёти, сестры и брата. Проверенные временем и любовью семейные традиции.",
+  openGraph: {
+    title: "Family Cook - Семейные рецепты",
+    description: "Домашние рецепты нашей большой семьи. Проверенные временем и любовью семейные традиции.",
+    url: "https://family-cook.ru",
+    siteName: "Family Cook",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Family Cook - Семейные рецепты",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Family Cook - Семейные рецепты",
+    description: "Домашние рецепты нашей большой семьи",
+    images: ["/og-image.jpg"],
+  },
 };
 
 export default function RootLayout({

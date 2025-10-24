@@ -7,6 +7,28 @@ export const metadata: Metadata = {
   title: "О нас - Семейные рецепты",
   description: "Домашние рецепты нашей большой семьи: бабушек, мамы, тёти, сестры и брата. Семейное кулинарное наследие, передаваемое из поколения в поколение.",
   keywords: "семейные рецепты, домашняя кухня, бабушкины рецепты, традиционная кулинария",
+  openGraph: {
+    title: "О нас - Family Cook",
+    description: "Домашние рецепты нашей большой семьи. Семейное кулинарное наследие, передаваемое из поколения в поколение.",
+    url: "https://family-cook.ru/about",
+    siteName: "Family Cook",
+    images: [
+      {
+        url: "/og-about.jpg",
+        width: 1200,
+        height: 630,
+        alt: "О нас - Family Cook",
+      },
+    ],
+    locale: "ru_RU",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "О нас - Family Cook",
+    description: "Домашние рецепты нашей большой семьи",
+    images: ["/og-about.jpg"],
+  },
 };
 
 const breadcrumbItems = [

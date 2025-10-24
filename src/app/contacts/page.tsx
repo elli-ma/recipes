@@ -7,6 +7,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, MapPin, Phone } from "lucide-react";
+import { useEffect } from "react";
 
 const breadcrumbItems = [
   { label: "Главная", href: "/" },
@@ -14,6 +15,25 @@ const breadcrumbItems = [
 ];
 
 export default function Contacts() {
+  useEffect(() => {
+    document.title = "Контакты - Family Cook";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Свяжитесь с нами. Есть вопросы или предложения? Мы будем рады услышать от вас!');
+    }
+    
+    // Open Graph meta tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    
+    if (ogTitle) ogTitle.setAttribute('content', 'Контакты - Family Cook');
+    if (ogDescription) ogDescription.setAttribute('content', 'Свяжитесь с нами. Есть вопросы или предложения?');
+    if (ogImage) ogImage.setAttribute('content', '/og-contacts.jpg');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://family-cook.ru/contacts');
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Handle form submission

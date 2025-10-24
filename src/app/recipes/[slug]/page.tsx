@@ -19,6 +19,26 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
       if (metaDescription) {
         metaDescription.setAttribute('content', `${recipe.description}. Время приготовления: ${recipe.prepTime + recipe.cookTime} минут. Порций: ${recipe.servings}.`);
       }
+      
+      // Open Graph meta tags
+      const ogTitle = document.querySelector('meta[property="og:title"]');
+      const ogDescription = document.querySelector('meta[property="og:description"]');
+      const ogImage = document.querySelector('meta[property="og:image"]');
+      const ogUrl = document.querySelector('meta[property="og:url"]');
+      
+      if (ogTitle) ogTitle.setAttribute('content', `${recipe.title} - Family Cook`);
+      if (ogDescription) ogDescription.setAttribute('content', recipe.description);
+      if (ogImage) ogImage.setAttribute('content', recipe.image);
+      if (ogUrl) ogUrl.setAttribute('content', `https://family-cook.ru/recipes/${recipe.slug}`);
+      
+      // Twitter Card meta tags
+      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+      const twitterImage = document.querySelector('meta[name="twitter:image"]');
+      
+      if (twitterTitle) twitterTitle.setAttribute('content', `${recipe.title} - Family Cook`);
+      if (twitterDescription) twitterDescription.setAttribute('content', recipe.description);
+      if (twitterImage) twitterImage.setAttribute('content', recipe.image);
     }
   }, [recipe]);
 

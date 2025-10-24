@@ -9,7 +9,7 @@ import { Breadcrumbs } from "@/components/Breadcrumbs";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Search } from "lucide-react";
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 
 const breadcrumbItems = [
   { label: "Главная", href: "/" },
@@ -19,6 +19,26 @@ const breadcrumbItems = [
 export default function RecipesPage() {
   const [selectedCategory, setSelectedCategory] = useState("Все");
   const [searchQuery, setSearchQuery] = useState("");
+
+  // Set page metadata
+  useEffect(() => {
+    document.title = "Рецепты - Family Cook";
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Все семейные рецепты: выпечка, десерты, основные блюда. Проверенные временем домашние рецепты.');
+    }
+    
+    // Open Graph meta tags
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    const ogImage = document.querySelector('meta[property="og:image"]');
+    const ogUrl = document.querySelector('meta[property="og:url"]');
+    
+    if (ogTitle) ogTitle.setAttribute('content', 'Рецепты - Family Cook');
+    if (ogDescription) ogDescription.setAttribute('content', 'Все семейные рецепты: выпечка, десерты, основные блюда');
+    if (ogImage) ogImage.setAttribute('content', '/og-recipes.jpg');
+    if (ogUrl) ogUrl.setAttribute('content', 'https://family-cook.ru/recipes');
+  }, []);
 
   // Get unique categories from recipes
   const categories = useMemo(() => {
