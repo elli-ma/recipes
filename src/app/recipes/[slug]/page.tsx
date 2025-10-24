@@ -1,13 +1,11 @@
-"use client";
-
-import { use, useEffect } from "react";
 import { recipes } from "@/lib/recipes";
 import Image from "next/image";
 import { Breadcrumbs } from "@/components/Breadcrumbs";
-import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Printer, Share2, Clock, Users, ChefHat } from "lucide-react";
+import { Clock, Users, ChefHat } from "lucide-react";
 import React from "react";
+import RecipeActions from "./RecipeActions";
+import { Metadata } from "next";
 
 // Generate static params for all recipes
 export function generateStaticParams() {
@@ -16,39 +14,48 @@ export function generateStaticParams() {
   }));
 }
 
-export default function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = use(params);
+// Generate metadata for each recipe
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
   const recipe = recipes.find((r) => r.slug === slug);
+  
+  if (!recipe) {
+    return {
+      title: "Recipe Not Found",
+    };
+  }
 
-  useEffect(() => {
-    if (recipe) {
-      document.title = `${recipe.title} - Family Cook`;
-      const metaDescription = document.querySelector('meta[name="description"]');
-      if (metaDescription) {
-        metaDescription.setAttribute('content', `${recipe.description}. Время приготовления: ${recipe.prepTime + recipe.cookTime} минут. Порций: ${recipe.servings}.`);
-      }
-      
-      // Open Graph meta tags
-      const ogTitle = document.querySelector('meta[property="og:title"]');
-      const ogDescription = document.querySelector('meta[property="og:description"]');
-      const ogImage = document.querySelector('meta[property="og:image"]');
-      const ogUrl = document.querySelector('meta[property="og:url"]');
-      
-      if (ogTitle) ogTitle.setAttribute('content', `${recipe.title} - Family Cook`);
-      if (ogDescription) ogDescription.setAttribute('content', recipe.description);
-      if (ogImage) ogImage.setAttribute('content', recipe.image);
-      if (ogUrl) ogUrl.setAttribute('content', `https://family-cook.ru/recipes/${recipe.slug}`);
-      
-      // Twitter Card meta tags
-      const twitterTitle = document.querySelector('meta[name="twitter:title"]');
-      const twitterDescription = document.querySelector('meta[name="twitter:description"]');
-      const twitterImage = document.querySelector('meta[name="twitter:image"]');
-      
-      if (twitterTitle) twitterTitle.setAttribute('content', `${recipe.title} - Family Cook`);
-      if (twitterDescription) twitterDescription.setAttribute('content', recipe.description);
-      if (twitterImage) twitterImage.setAttribute('content', recipe.image);
-    }
-  }, [recipe]);
+  return {
+    title: `${recipe.title} - Family Cook`,
+    description: `${recipe.description}. Время приготовления: ${recipe.prepTime + recipe.cookTime} минут. Порций: ${recipe.servings}.`,
+    openGraph: {
+      title: `${recipe.title} - Family Cook`,
+      description: recipe.description,
+      url: `https://family-cook.ru/recipes/${recipe.slug}`,
+      siteName: "Family Cook",
+      images: [
+        {
+          url: recipe.image,
+          width: 1200,
+          height: 630,
+          alt: recipe.title,
+        },
+      ],
+      locale: "ru_RU",
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${recipe.title} - Family Cook`,
+      description: recipe.description,
+      images: [recipe.image],
+    },
+  };
+}
+
+export default async function RecipePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const recipe = recipes.find((r) => r.slug === slug);
 
   if (!recipe) {
     return <div>Recipe not found</div>;
@@ -59,28 +66,6 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
     { label: "Рецепты", href: "/recipes" },
     { label: recipe.title },
   ];
-
-  const handlePrint = () => {
-    window.print();
-  };
-
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: recipe.title,
-          text: recipe.description,
-          url: window.location.href,
-        });
-      } catch (err) {
-        console.log("Error sharing:", err);
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href);
-      alert("Ссылка скопирована в буфер обмена!");
-    }
-  };
 
   return (
     <div className="py-6 md:py-8 px-4 md:px-0">
@@ -104,14 +89,7 @@ export default function RecipePage({ params }: { params: Promise<{ slug: string 
               <h1 className="text-2xl md:text-3xl font-bold mb-2 uppercase text-green-900">{recipe.title}</h1>
               <p className="text-gray-600 text-sm md:text-base">{recipe.description}</p>
             </div>
-            <div className="flex gap-2 print:hidden">
-              <Button variant="outline" size="icon" onClick={handlePrint} className="h-9 w-9 md:h-10 md:w-10">
-                <Printer className="h-4 w-4" />
-              </Button>
-              <Button variant="outline" size="icon" onClick={handleShare} className="h-9 w-9 md:h-10 md:w-10">
-                <Share2 className="h-4 w-4" />
-              </Button>
-            </div>
+            <RecipeActions recipe={recipe} />
           </div>
 
           <div className="flex flex-wrap items-center gap-3 md:gap-6 mb-4 md:mb-6 text-gray-600 text-sm md:text-base">

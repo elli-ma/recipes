@@ -8,4 +8,5 @@ node_modules
 .npm
 .node_repl_history
 .next
+out
 next-env.d.ts
