@@ -1,0 +1,46 @@
+name: Build and Deploy to FTP
+
+on:
+  push:
+    branches:
+      - main  # Trigger on push to main branch
+  workflow_dispatch:  # Allow manual trigger
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      # Step 1: Checkout the repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      # Step 2: Setup Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'  # Use Node.js 20 (compatible with Next.js 15)
+          cache: 'npm'
+      
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm ci
+      
+      # Step 4: Build the Next.js project
+      - name: Build project
+        run: npm run build
+      
+      # Step 5: Deploy to FTP server
+      - name: Deploy to FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./out/  # The build output directory
+          server-dir: ./family-cook/public_html/  # Your FTP server directory
+          dangerous-clean-slate: false  # Set to true to delete all files on server before upload
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
