@@ -20,7 +20,7 @@ export const recipes: Recipe[] = [
     slug: "flyurnik",
     title: "Флюрник",
     description: "Домашний пирог с повидлом по рецепту тёти Флюры",
-    image: "/recipes/1.jpg",
+    image: "/recipes/10.jpg",
     ingredients: [
       "1 пакетик быстрых дрожжей",
       "1 стакан тёплого молока",

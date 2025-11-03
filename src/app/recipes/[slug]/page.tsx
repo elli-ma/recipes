@@ -76,7 +76,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
           alt={recipe.title}
           width={800}
           height={400}
-          className="w-full h-48 md:h-64 object-cover rounded-lg"
+          className="w-full h-56 md:h-96 object-cover rounded-lg"
         />
         <div className="py-4 md:py-6">
           <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-4 gap-4">
