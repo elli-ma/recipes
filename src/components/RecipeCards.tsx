@@ -33,7 +33,7 @@ export function RecipeCards() {
               />
             </div>
             <CardHeader className="p-4">
-              <CardTitle className="text-lg md:text-xl uppercase">{recipe.title}</CardTitle>
+              <CardTitle className="text-base md:text-lg uppercase">{recipe.title}</CardTitle>
               <CardDescription className="text-sm line-clamp-2">{recipe.description}</CardDescription>
             </CardHeader>
             <CardContent className="p-4 pt-0">

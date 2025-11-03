@@ -63,11 +63,7 @@ export default function About() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mb-8 md:mb-12">
           <Card className="text-center">
             <CardHeader>
-              <div className="flex justify-center mb-4">
-                <div className="bg-green-900 p-4 rounded-full">
-                  <ChefHat className="h-8 w-8 text-white" />
-                </div>
-              </div>
+           
               <CardTitle className="uppercase text-base md:text-lg">Проверенные временем</CardTitle>
             </CardHeader>
             <CardContent className="px-4 pb-4">
@@ -80,11 +76,6 @@ export default function About() {
 
           <Card className="text-center">
             <CardHeader>
-              <div className="flex justify-center mb-4">
-                <div className="bg-green-900 p-4 rounded-full">
-                  <Heart className="h-8 w-8 text-white" />
-                </div>
-              </div>
               <CardTitle className="uppercase text-base md:text-lg">Семейные традиции</CardTitle>
             </CardHeader>
             <CardContent className="px-4 pb-4">
@@ -96,11 +87,6 @@ export default function About() {
 
           <Card className="text-center">
             <CardHeader>
-              <div className="flex justify-center mb-4">
-                <div className="bg-green-900 p-4 rounded-full">
-                  <Users className="h-8 w-8 text-white" />
-                </div>
-              </div>
               <CardTitle className="uppercase text-base md:text-lg">Домашний уют</CardTitle>
             </CardHeader>
             <CardContent className="px-4 pb-4">
