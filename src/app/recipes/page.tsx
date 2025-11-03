@@ -110,7 +110,7 @@ export default function RecipesPage() {
                 )}
               </CardContent>
               <CardFooter className="p-3 md:p-4 pt-0">
-                <Button variant="outline" className="w-full text-sm">Подробнее</Button>
+                <Button variant="outline" className="w-full text-sm uppercase font-semibold">Подробнее</Button>
               </CardFooter>
             </Card>
           </Link>

@@ -43,14 +43,12 @@ export default function Error({
           <Button 
             size="lg" 
             onClick={reset}
-            className="bg-green-900 hover:bg-green-800 uppercase"
+            className="bg-green-900 hover:bg-green-800 uppercase font-semibold"
           >
-        
             Попробовать снова
           </Button>
           <Link href="/">
-            <Button size="lg" variant="outline" className="uppercase">
-         
+            <Button size="lg" variant="outline" className="uppercase font-semibold border-green-900 text-green-900 hover:bg-green-50">
               На главную
             </Button>
           </Link>

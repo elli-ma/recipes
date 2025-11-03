@@ -21,14 +21,12 @@ export default function NotFound() {
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <Link href="/">
-            <Button size="lg" className="bg-green-900 hover:bg-green-800 uppercase">
-
+            <Button size="lg" className="bg-green-900 hover:bg-green-800 uppercase font-semibold">
               На главную
             </Button>
           </Link>
           <Link href="/recipes">
-            <Button size="lg" variant="outline" className="uppercase">
-            
+            <Button size="lg" variant="outline" className="uppercase font-semibold border-green-900 text-green-900 hover:bg-green-50">
               Смотреть рецепты
             </Button>
           </Link>

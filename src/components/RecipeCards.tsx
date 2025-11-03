@@ -53,7 +53,7 @@ export function RecipeCards() {
             </CardContent>
             <CardFooter className="p-4 pt-0">
               <Link href={`/recipes/${recipe.slug}`} className="w-full">
-                <Button variant="outline" className="w-full shadow-none text-sm">
+                <Button variant="outline" className="w-full shadow-none text-sm uppercase font-semibold">
                   Смотреть рецепт
                 </Button>
               </Link>

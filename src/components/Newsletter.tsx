@@ -17,7 +17,7 @@ export function Newsletter() {
             placeholder="Введите ваш email"
             className="flex-1 h-10 md:h-11 text-sm md:text-base"
           />
-          <Button type="submit" className="bg-green-900 hover:bg-green-800 text-white font-semibold h-10 md:h-11 text-sm md:text-base">
+          <Button type="submit" className="bg-green-900 hover:bg-green-800 text-white font-semibold h-10 md:h-11 text-sm md:text-base uppercase">
             Подписаться
           </Button>
         </form>
