@@ -42,7 +42,7 @@ export default function About() {
       <Breadcrumbs items={breadcrumbItems} />
       
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-green-900 uppercase">О нас</h1>
+        <h1 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-green-900 uppercase">О нас</h1>
         
         <div className="mb-8 md:mb-12">
           <p className="text-gray-700 mb-4 text-base md:text-lg">
@@ -113,7 +113,7 @@ export default function About() {
         </div>
 
         <div className="bg-gray-100 rounded-lg p-4 md:p-8 border-l-4 border-green-900">
-          <h2 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-green-900 uppercase">Наша история</h2>
+          <h2 className="text-xl md:text-2xl font-black mb-3 md:mb-4 text-green-900 uppercase">Наша история</h2>
           <p className="text-gray-700 mb-3 md:mb-4 text-sm md:text-base">
             Наша большая семья всегда любила готовить. 
           </p>

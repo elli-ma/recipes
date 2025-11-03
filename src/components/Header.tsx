@@ -24,8 +24,9 @@ export function Header() {
   
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full items-center justify-between flex">
 
-        <Link href="/" prefetch={false} className="flex-shrink-0">
-          <img className="h-12 md:h-16" src="/logo.svg" alt="Logo" />
+        <Link href="/" prefetch={false} className="flex-shrink-0 uppercase font-black text-green-900 leading-none py-2">
+          {/* <img className="h-12 md:h-16" src="/logo.svg" alt="Logo" /> */}
+          семейные <br/> рецепты
         </Link>
  
       <div className="hidden md:flex uppercase">
@@ -56,7 +57,7 @@ export function Header() {
         </SheetTrigger>
         <SheetContent side="right" className="w-[280px] sm:w-[350px]">
           <div className="flex flex-col gap-6 mt-8">
-            <div className="text-xl font-bold text-green-900 uppercase mb-4">Меню</div>
+            <div className="text-xl font-black text-green-900 uppercase mb-4">Меню</div>
             {navLinks.map(({ href, label }) => (
               <Link
                 key={href}

@@ -28,7 +28,7 @@ export function Testimonials() {
   return (
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4 text-green-900">Отзывы наших пользователей</h2>
+        <h2 className="text-3xl font-black text-center mb-4 text-green-900 uppercase">Отзывы наших пользователей</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Узнайте, что говорят о нас те, кто уже готовит по нашим рецептам
         </p>

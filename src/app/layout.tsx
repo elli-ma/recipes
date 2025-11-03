@@ -9,7 +9,7 @@ import { CookieConsent } from "@/components/CookieConsent";
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-montserrat", // CSS-переменная для Tailwind
-  weight: ["400", "500", "700"],
+  weight: ["400", "500", "700", "900"],
 });
 
 export const metadata: Metadata = {

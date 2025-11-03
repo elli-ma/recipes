@@ -19,7 +19,7 @@ export default function PrivacyPolicy() {
       <Breadcrumbs items={breadcrumbItems} />
       
       <div>
-        <h1 className="text-4xl font-bold mb-6 text-green-900 uppercase">Политика конфиденциальности</h1>
+        <h1 className="text-4xl font-black mb-6 text-green-900 uppercase">Политика конфиденциальности</h1>
         <p className="text-gray-600 mb-8">
           Последнее обновление: {new Date().toLocaleDateString('ru-RU')}
         </p>

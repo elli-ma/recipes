@@ -20,7 +20,7 @@ const reviews = [
 export function Reviews() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold mb-8 text-center">Отзывы пользователей</h2>
+      <h2 className="text-3xl font-black mb-8 text-center uppercase text-green-900">Отзывы пользователей</h2>
       <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         {reviews.map((review, idx) => (
           <Card key={idx} className="hover:shadow-lg transition-shadow">

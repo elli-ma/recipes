@@ -13,7 +13,7 @@ const categories = [
 export function Categories() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold mb-6">Категории</h2>
+      <h2 className="text-2xl font-black mb-6 uppercase text-green-900">Категории</h2>
       <div className="flex gap-4 overflow-x-auto py-2">
         {categories.map((cat) => (
           <Link

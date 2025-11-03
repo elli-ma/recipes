@@ -7,7 +7,7 @@ export function Newsletter() {
   return (
     <section className="py-8 md:py-16 rounded-2xl mb-8 md:mb-16 px-4 md:px-0">
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold mb-3 md:mb-4 text-green-900">Сохраните семейные рецепты</h2>
+        <h2 className="text-2xl md:text-3xl font-black mb-3 md:mb-4 text-green-900 uppercase">Сохраните семейные рецепты</h2>
         <p className="text-gray-700 mb-4 md:mb-6 text-sm md:text-base">
           Подпишитесь, чтобы получать новые семейные рецепты из нашей кулинарной книги.
         </p>

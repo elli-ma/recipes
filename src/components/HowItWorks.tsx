@@ -30,7 +30,7 @@ export function HowItWorks() {
   return (
     <section className="py-16 bg-gray-50 rounded-3xl mb-12">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4 text-green-900">Как это работает</h2>
+        <h2 className="text-3xl font-black text-center mb-4 text-green-900 uppercase">Как это работает</h2>
         <p className="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Всего четыре простых шага отделяют вас от вкусного домашнего блюда
         </p>
@@ -41,7 +41,7 @@ export function HowItWorks() {
             return (
               <Card key={index} className="relative overflow-hidden hover:shadow-lg transition-shadow">
                 <CardContent className="pt-6 text-center">
-                  <div className="absolute top-4 right-4 text-6xl font-bold text-gray-200">
+                  <div className="absolute top-4 right-4 text-6xl font-black text-gray-200">
                     {index + 1}
                   </div>
                   <div className="flex justify-center mb-4">
@@ -49,7 +49,7 @@ export function HowItWorks() {
                       <Icon className="h-8 w-8 text-white" />
                     </div>
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{step.title}</h3>
+                  <h3 className="font-semibold text-lg mb-2 uppercase">{step.title}</h3>
                   <p className="text-gray-600 text-sm">{step.description}</p>
                 </CardContent>
               </Card>

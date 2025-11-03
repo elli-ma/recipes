@@ -35,7 +35,7 @@ const newRecipes = [
 export function NewRecipes() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-16">
-      <h2 className="text-3xl font-bold mb-8 text-center">Новые рецепты</h2>
+      <h2 className="text-3xl font-black mb-8 text-center uppercase text-green-900">Новые рецепты</h2>
 
       <div className="flex gap-6 overflow-x-auto scrollbar-hide">
         {newRecipes.map((recipe) => (
@@ -49,7 +49,7 @@ export function NewRecipes() {
               className="h-40 w-full object-cover rounded-t-md"
             />
             <CardHeader>
-              <CardTitle>{recipe.title}</CardTitle>
+              <CardTitle className="uppercase">{recipe.title}</CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>{recipe.description}</CardDescription>

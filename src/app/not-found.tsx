@@ -10,7 +10,7 @@ export default function NotFound() {
         <img className="h-24" src="/logo.svg" alt="Logo" />
         </div>
         
-        <h1 className="text-6xl font-bold text-green-900 mb-4">404</h1>
+        <h1 className="text-6xl font-black text-green-900 mb-4">404</h1>
         <h2 className="text-3xl font-semibold text-green-900 mb-4 uppercase">
           Страница не найдена
         </h2>

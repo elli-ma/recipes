@@ -15,7 +15,7 @@ const steps = [
 export function StepsAccordion() {
   return (
     <section className="max-w-3xl mx-auto px-4 py-12">
-      <h2 className="text-2xl font-bold mb-6 text-center">Быстрые рецепты</h2>
+      <h2 className="text-2xl font-black mb-6 text-center uppercase text-green-900">Быстрые рецепты</h2>
       <Accordion type="single" collapsible>
         {steps.map((step, idx) => (
           <AccordionItem key={idx} value={`step-${idx}`}>

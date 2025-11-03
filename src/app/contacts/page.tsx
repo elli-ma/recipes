@@ -45,7 +45,7 @@ export default function Contacts() {
       <Breadcrumbs items={breadcrumbItems} />
       
       <div>
-        <h1 className="text-3xl md:text-4xl font-bold mb-4 md:mb-6 text-green-900 uppercase">Свяжитесь с нами</h1>
+        <h1 className="text-3xl md:text-4xl font-black mb-4 md:mb-6 text-green-900 uppercase">Свяжитесь с нами</h1>
         <p className="text-gray-600 mb-8 md:mb-12 text-sm md:text-base">
           Есть вопросы или предложения? Мы будем рады услышать от вас!
         </p>

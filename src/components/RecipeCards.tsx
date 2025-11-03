@@ -19,7 +19,7 @@ export function RecipeCards() {
 
   return (
     <section className="px-4 md:px-0">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-green-900 uppercase">Популярные рецепты</h2>
+      <h2 className="text-2xl md:text-3xl font-black mb-6 md:mb-8 text-green-900 uppercase">Популярные рецепты</h2>
 
       <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
         {popularRecipes.map((recipe) => (
@@ -33,7 +33,7 @@ export function RecipeCards() {
               />
             </div>
             <CardHeader className="p-4">
-              <CardTitle className="text-lg md:text-xl">{recipe.title}</CardTitle>
+              <CardTitle className="text-lg md:text-xl uppercase">{recipe.title}</CardTitle>
               <CardDescription className="text-sm line-clamp-2">{recipe.description}</CardDescription>
             </CardHeader>
             <CardContent className="p-4 pt-0">

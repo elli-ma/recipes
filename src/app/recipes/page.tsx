@@ -56,7 +56,7 @@ export default function RecipesPage() {
   return (
     <div className="py-6 md:py-8 px-4 md:px-0">
       <Breadcrumbs items={breadcrumbItems} />
-      <h1 className="text-3xl md:text-4xl font-bold mb-6 md:mb-8 uppercase text-green-900">Рецепты</h1>
+      <h1 className="text-3xl md:text-4xl font-black mb-6 md:mb-8 uppercase text-green-900">Рецепты</h1>
       
       {/* Search Bar */}
       <div className="mb-6 md:mb-8">
@@ -103,7 +103,7 @@ export default function RecipesPage() {
                 />
               </CardHeader>
               <CardContent className="p-3 md:p-4 flex-grow">
-                <CardTitle className="text-base md:text-lg font-semibold mb-2">{recipe.title}</CardTitle>
+                <CardTitle className="text-base md:text-lg font-semibold mb-2 uppercase">{recipe.title}</CardTitle>
                 <p className="text-gray-600 text-xs md:text-sm mb-2 line-clamp-2">{recipe.description}</p>
                 {recipe.note && (
                   <p className="text-xs text-green-700 italic font-medium line-clamp-1">{recipe.note}</p>

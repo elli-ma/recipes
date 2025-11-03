@@ -86,7 +86,7 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
                   {recipe.category}
                 </Badge>
               </div>
-              <h1 className="text-2xl md:text-3xl font-bold mb-2 uppercase text-green-900">{recipe.title}</h1>
+              <h1 className="text-2xl md:text-3xl font-black mb-2 uppercase text-green-900">{recipe.title}</h1>
               <p className="text-gray-600 text-sm md:text-base">{recipe.description}</p>
             </div>
             <RecipeActions recipe={recipe} />

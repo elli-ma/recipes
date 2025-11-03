@@ -25,7 +25,7 @@ export default function Error({
         
         </div>
         
-        <h1 className="text-4xl font-bold text-green-900 mb-4 uppercase">
+        <h1 className="text-4xl font-black text-green-900 mb-4 uppercase">
           Что-то пошло не так
         </h1>
         <p className="text-gray-600 text-lg mb-8">
