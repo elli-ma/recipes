@@ -18,7 +18,7 @@ export function RecipeCards() {
   const popularRecipes = recipes.filter((recipe) => recipe.popular);
 
   return (
-    <section className="px-4 md:px-0">
+    <section className="">
       <h2 className="text-2xl md:text-3xl font-black mb-6 md:mb-8 text-green-900 uppercase">Популярные рецепты</h2>
 
       <div className="grid gap-4 md:gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">

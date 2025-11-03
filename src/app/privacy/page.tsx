@@ -15,7 +15,7 @@ const breadcrumbItems = [
 
 export default function PrivacyPolicy() {
   return (
-    <div className="py-8">
+    <div className="py-6 md:py-8">
       <Breadcrumbs items={breadcrumbItems} />
       
       <div>
