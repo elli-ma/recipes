@@ -37,6 +37,7 @@ export function CookieConsent() {
         <div className="flex gap-3 items-center">
           <Button
             onClick={acceptCookies}
+            size="lg"
             className="bg-white text-green-900 hover:bg-gray-100 uppercase font-semibold"
           >
             Принять

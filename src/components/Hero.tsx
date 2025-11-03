@@ -25,13 +25,13 @@ export function Hero() {
             
             <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center w-full sm:w-auto">
               <Link href="/recipes" className="w-full sm:w-auto">
-                <Button size="lg" className="w-full sm:w-auto bg-green-900 hover:bg-green-800 uppercase font-semibold text-xs md:text-sm">
+                <Button size="lg" className="w-full sm:w-auto bg-green-900 hover:bg-green-800 uppercase font-semibold">
                   Смотреть рецепты
                 </Button>
               </Link>
               <Link href="/about" className="w-full sm:w-auto">
-               
-                <Button size="lg" variant="outline" className="w-full shadow-none text-sm uppercase font-semibold">  О нас
+                <Button size="lg" variant="outline" className="w-full sm:w-auto shadow-none uppercase font-semibold border-green-900 text-green-900 hover:bg-green-50">
+                  О нас
                 </Button>
               </Link>
             </div>

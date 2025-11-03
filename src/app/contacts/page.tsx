@@ -80,7 +80,7 @@ export default function Contacts() {
                     className="text-sm md:text-base" 
                   />
                 </div>
-                <Button type="submit" className="w-full bg-green-900 hover:bg-green-800 text-white font-semibold uppercase text-sm md:text-base">
+                <Button type="submit" size="lg" className="w-full bg-green-900 hover:bg-green-800 text-white font-semibold uppercase">
                   Отправить
                 </Button>
               </form>
