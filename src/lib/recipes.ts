@@ -20,7 +20,7 @@ export const recipes: Recipe[] = [
     slug: "flyurnik",
     title: "Флюрник",
     description: "Домашний пирог с повидлом по рецепту тёти Флюры",
-    image: "/recipes/10.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 пакетик быстрых дрожжей",
       "1 стакан тёплого молока",
@@ -56,7 +56,7 @@ export const recipes: Recipe[] = [
     slug: "morkovnyy-tort",
     title: "Морковный торт",
     description: "Нежный домашний торт с морковью и сметанным кремом по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 стакан натертой на мелкой тёрке моркови",
       "250 г маргарина",
@@ -88,7 +88,7 @@ export const recipes: Recipe[] = [
     slug: "ovsyanoe-pechenie",
     title: "Овсяное печенье",
     description: "Домашнее овсяное печенье по рецепту бабушки Фаи — простое и ароматное",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "4 стакана геркулеса (овсяных хлопьев)",
       "1 стакан сахара",
@@ -118,7 +118,7 @@ export const recipes: Recipe[] = [
     slug: "mannik",
     title: "Манник",
     description: "Пышный и нежный манник на кефире по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 бутылка кефира (примерно 0,5 л)",
       "0,5 пачки маргарина (растопленного)",
@@ -147,7 +147,7 @@ export const recipes: Recipe[] = [
     slug: "medovik",
     title: "Медовик",
     description: "Классический медовый торт по старинному рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 стакан сахара",
       "2 столовые ложки мёда",
@@ -179,7 +179,7 @@ export const recipes: Recipe[] = [
     slug: "belish",
     title: "Белиш",
     description: "Традиционный пирог с рисом, изюмом и курагой по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1/2 бутылки кефира (примерно 250 мл)",
       "300 г сливочного масла",
@@ -212,7 +212,7 @@ export const recipes: Recipe[] = [
     slug: "eklery",
     title: "Эклеры",
     description: "Воздушные заварные пирожные с кремом по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "125 г маргарина",
       "0,5 чайной ложки соли",
@@ -244,7 +244,7 @@ export const recipes: Recipe[] = [
     slug: "smetannik",
     title: "Сметанник",
     description: "Нежный домашний торт со сметанным кремом и шоколадной глазурью по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "100 г сметаны",
       "0,5 стакана сахара",
@@ -280,7 +280,7 @@ export const recipes: Recipe[] = [
     slug: "tvorozhnye-lepeshki",
     title: "Творожные лепёшки",
     description: "Мягкие и ароматные лепёшки из творога по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 пачка творога (около 200 г)",
       "2 пачки мягкого маргарина",
@@ -306,7 +306,7 @@ export const recipes: Recipe[] = [
     slug: "vafli",
     title: "Вафли",
     description: "Домашние вафли с насыщенным вкусом по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 стакан сахара",
       "1 пачка маргарина (примерно 200 г)",
@@ -331,7 +331,7 @@ export const recipes: Recipe[] = [
     slug: "korzinochki",
     title: "Корзиночки",
     description: "Хрустящие масляные корзиночки по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 пачка маргарина",
       "3/4 стакана сахара",
@@ -358,7 +358,7 @@ export const recipes: Recipe[] = [
     slug: "pirog-vostochnaya-sladost",
     title: "Пирог «Восточная сладость»",
     description: "Сладкий пирог с обильной начинкой из сухофруктов по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "300 г масла (холодного)",
       "3 стакана муки",
@@ -392,7 +392,7 @@ export const recipes: Recipe[] = [
     slug: "he",
     title: "Хе",
     description: "Острый мясно-морковный салат в восточном стиле по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 кг моркови",
       "0.5 кг мяса (говядина или свинина)",
@@ -421,7 +421,7 @@ export const recipes: Recipe[] = [
     slug: "adygeyskiy-syr",
     title: "Адыгейский сыр",
     description: "Домашний мягкий сыр по старинному рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "3 литра молока",
       "0.5 кг сметаны",
@@ -447,7 +447,7 @@ export const recipes: Recipe[] = [
     slug: "pirog-s-vishney",
     title: "Пирог с вишней",
     description: "Нежный домашний пирог с вишней по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "3 яйца",
       "1 стакан сахара",
@@ -475,7 +475,7 @@ export const recipes: Recipe[] = [
     slug: "persiki-pirozhnoe",
     title: "Персики (пирожное)",
     description: "Песочные пирожные в виде персиков — сладость из детства бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "2 яйца",
       "2 стакана сахара",
@@ -509,7 +509,7 @@ export const recipes: Recipe[] = [
     slug: "mannik-na-smetane",
     title: "Манник на сметане",
     description: "Нежный манник на сметане по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 стакан манки",
       "1 стакан сметаны",
@@ -538,7 +538,7 @@ export const recipes: Recipe[] = [
     slug: "pirog-fantaziya-iz-yablok",
     title: "Пирог «Фантазия» из яблок",
     description: "Ароматный яблочный пирог с карамельным оттенком по рецепту бабушки Фаи",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "50 г маргарина",
       "3/4 стакана сахара",
@@ -566,7 +566,7 @@ export const recipes: Recipe[] = [
     slug: "mannik-na-kefire",
     title: "Манник на кефире",
     description: "Быстрый манник на кефире от тёти Флю (по книге бабушки Фаи).",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 бутылка кефира",
       "0.5 пачки маргарина (растопленного)",
@@ -588,7 +588,7 @@ export const recipes: Recipe[] = [
     slug: "smetannik-s-glazuryu",
     title: "Сметанник (с глазурью)",
     description: "Домашний сметанник с шоколадной глазурью.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "Тесто: 100 г сметаны, 0.5 стакана сахара, соль, 1/2 ч.л. соды, мука",
       "Крем: 300 г сметаны, 1 стакан сахара",
@@ -611,7 +611,7 @@ export const recipes: Recipe[] = [
     slug: "lepeshki-tvorozhnye",
     title: "Лепёшки творожные",
     description: "Простые и быстрые творожные лепёшки.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 пачка творога",
       "2 пачки мягкого маргарина",
@@ -632,7 +632,7 @@ export const recipes: Recipe[] = [
     slug: "vafli-klassicheskie",
     title: "Вафли (классические)",
     description: "Домашние вафли по классическому рецепту.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 стакан сахара",
       "1 пачка маргарина",
@@ -652,7 +652,7 @@ export const recipes: Recipe[] = [
     slug: "tvorozhnaya-zapekanka",
     title: "Творожная запеканка",
     description: "Нежная творожная запеканка, как в детском саду.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "0.5 кг творога",
       "2 яйца",
@@ -673,7 +673,7 @@ export const recipes: Recipe[] = [
     slug: "tort-na-mayoneze",
     title: "Торт на майонезе",
     description: "Необычный, но очень вкусный торт на майонезе.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "1 банка майонеза",
       "3 яйца",
@@ -694,7 +694,7 @@ export const recipes: Recipe[] = [
     slug: "krem-zavarnoy",
     title: "Крем заварной",
     description: "Классический заварной крем для тортов и пирожных.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "300 г сливок",
       "0.75 стакана сахара",
@@ -715,7 +715,7 @@ export const recipes: Recipe[] = [
     slug: "tort-na-sgushchenke",
     title: "Торт на сгущёнке",
     description: "Простой торт на сгущёнке с какао-кремом.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "2 яйца",
       "1 ст. ложка сахара",
@@ -739,7 +739,7 @@ export const recipes: Recipe[] = [
     slug: "pechenie-na-smetane",
     title: "Печенье на сметане",
     description: "Домашнее печенье на сметане.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "2–3 яйца",
       "2 стакана сахара",
@@ -760,7 +760,7 @@ export const recipes: Recipe[] = [
     slug: "tort-marina-orehovyy",
     title: "Торт «Марина» ореховый",
     description: "Ореховый торт с мёдом и сметанным кремом.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "2 яйца",
       "3/4 стакана сахара",
@@ -783,7 +783,7 @@ export const recipes: Recipe[] = [
     slug: "syrniki-ot-zheni",
     title: "Сырники от Жени",
     description: "Нежные классические сырники без лишней влаги, вкуснее со сгущёнкой.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "300 г творога (отжать через сито под прессом на ночь)",
       "1 желток",
@@ -807,7 +807,7 @@ export const recipes: Recipe[] = [
     slug: "venskie-vafli-ot-zheni",
     title: "Венские вафли от Жени",
     description: "Нежные венские вафли с творогом — мягкие внутри и румяные снаружи.",
-    image: "/recipes/1.jpg",
+    image: "/recipes/base.svg",
     ingredients: [
       "75–100 г сливочного масла (в оригинале 100 г, Жуни кладёт 75 г)",
       "4 ст. ложки сахара",
