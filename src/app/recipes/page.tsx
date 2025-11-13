@@ -56,7 +56,7 @@ export default function RecipesPage() {
   return (
     <div className="py-6 md:py-8">
       <Breadcrumbs items={breadcrumbItems} />
-      <h1 className="text-3xl md:text-4xl font-black mb-6 md:mb-8 uppercase text-green-900">Рецепты</h1>
+      <h1 className="text-2xl md:text-4xl font-black mb-4 md:mb-6 text-green-900 uppercase">Рецепты</h1>
       
       {/* Search Bar */}
       <div className="mb-6 md:mb-8">
