@@ -30,7 +30,7 @@ export function Hero() {
                 </Button>
               </Link>
               <Link href="/about" className="w-full sm:w-auto">
-                <Button size="lg" variant="outline" className="w-full sm:w-auto shadow-none uppercase font-semibold border-green-900 text-green-900 hover:bg-green-50">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto shadow-none uppercase font-semibold border-green-900 text-green-900 hover:bg-gray-50">
                   О нас
                 </Button>
               </Link>
