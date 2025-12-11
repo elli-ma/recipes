@@ -100,7 +100,7 @@ export default function Contacts() {
                   </div>
                   <div>
                     <h3 className="font-semibold uppercase text-xs md:text-sm">Email</h3>
-                    <p className="text-gray-600 text-sm md:text-base">info@howtocook.com</p>
+                    <p className="text-gray-600 text-sm md:text-base">info@family-cook.ru</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -109,7 +109,7 @@ export default function Contacts() {
                   </div>
                   <div>
                     <h3 className="font-semibold uppercase text-xs md:text-sm">Телефон</h3>
-                    <p className="text-gray-600 text-sm md:text-base">+7 (123) 456-78-90</p>
+                    <p className="text-gray-600 text-sm md:text-base">+7 (993) 481-58-71</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
