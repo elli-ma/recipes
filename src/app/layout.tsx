@@ -4,6 +4,7 @@ import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { CookieConsent } from "@/components/CookieConsent";
+import YandexMetrika from '@/components/YandexMetrika';
 
 // Подключаем Montserrat
 const montserrat = Montserrat({
@@ -47,6 +48,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${montserrat.variable}`}>
       <body className="font-sans antialiased bg-gray-50">
+         <YandexMetrika />
         <Header/>
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {children}
