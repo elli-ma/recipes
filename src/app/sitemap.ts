@@ -6,8 +6,8 @@ export default async function sitemap() {
   const baseUrl = "https://family-cook.ru"; // замени на свой домен
 
   // общие страницы
-  const staticPages = ["", "about", "contacts"].map((page) => ({
-    url: `${baseUrl}/${page}/`,
+  const staticPages = ["", "about/", "contacts/"].map((page) => ({
+    url: `${baseUrl}/${page}`,
     lastModified: new Date().toISOString(),
   }));
 
