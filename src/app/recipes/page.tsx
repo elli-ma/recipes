@@ -46,7 +46,7 @@ export default function RecipesPage() {
     return ["Все", ...uniqueCategories];
   }, []);
 
-  const filteredRecipes = recipes.filter(recipe => {
+  const filteredRecipes = [...recipes].reverse().filter(recipe => {
     const matchesCategory = selectedCategory === "Все" || recipe.category === selectedCategory;
     const matchesSearch = recipe.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                          recipe.description.toLowerCase().includes(searchQuery.toLowerCase());

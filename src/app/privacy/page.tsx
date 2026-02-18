@@ -132,7 +132,7 @@ export default function PrivacyPolicy() {
             <CardContent className="space-y-4">
               <p className="text-gray-700">
                 Все предложения или вопросы по поводу настоящей Политики конфиденциальности следует 
-                направлять на страницу <a href="/contacts" className="text-green-900 hover:underline font-semibold">Контакты</a>.
+                направлять на почту <a href="mailto:info@family-cook.ru" className="text-green-900 hover:underline font-semibold">info@family-cook.ru</a>.
               </p>
             </CardContent>
           </Card>

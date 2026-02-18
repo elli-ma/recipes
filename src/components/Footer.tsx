@@ -5,7 +5,6 @@ import { ChefHat } from "lucide-react";
 
 const footerLinks = [
   { href: "/about", label: "О нас" },
-  { href: "/contacts", label: "Контакты" },
   { href: "/privacy", label: "Политика конфиденциальности" },
 ];
 

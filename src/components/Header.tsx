@@ -16,7 +16,6 @@ const navLinks = [
   { href: "/", label: "Главная" },
   { href: "/recipes", label: "Рецепты" },
   { href: "/about", label: "О сайте" },
-  { href: "/contacts", label: "Контакты" },
 ];
 
 export function Header() {
