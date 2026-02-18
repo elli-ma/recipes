@@ -7,7 +7,7 @@ export default function Home() {
     <main className="">
       <Hero />
       <RecipeCards />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   );
 }
