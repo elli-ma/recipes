@@ -10,12 +10,8 @@ for (const line of envFile.split("\n")) {
 
 const recipes = [
   {
-    slug: "peremyachi",
-    dish: "several round baked buns with pinched crimped edges around the top, each bun has a small round hole in the center of the top revealing brown meat and potato filling inside, the dough is golden and puffy, traditional Tatar peremyachi pastries",
-  },
-  {
     slug: "syrniki-ot-zheni",
-    dish: "four thick round pan-fried cottage cheese patties (syrniki), smooth rounded soft edges, golden brown on top and bottom, creamy white inside, puffy cylinder shape, served with sour cream and jam on the side",
+    dish: "five thick round pan-fried cottage cheese patties (syrniki), smooth rounded soft edges, golden brown on top and bottom, creamy white inside, puffy cylinder shape, neatly arranged on the plate",
   },
 ];
 
