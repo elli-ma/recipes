@@ -14,8 +14,17 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://family-cook.ru"),
   title: "Family Cook - Семейные рецепты для каждого дня",
   description: "Домашние рецепты нашей большой семьи: бабушек, мамы, тёти, сестры и брата. Проверенные временем и любовью семейные традиции.",
+  icons: {
+    icon: [
+      { url: "/favicon-48x48.png", sizes: "48x48", type: "image/png" },
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/logo.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-touch-icon.png",
+  },
   openGraph: {
     title: "Family Cook - Семейные рецепты",
     description: "Домашние рецепты нашей большой семьи. Проверенные временем и любовью семейные традиции.",
@@ -46,7 +55,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${montserrat.variable}`}>
+    <html lang="ru" className={`${montserrat.variable}`}>
       <body className="font-sans antialiased bg-gray-50">
          <YandexMetrika />
         <Header/>

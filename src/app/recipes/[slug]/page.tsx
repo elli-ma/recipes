@@ -28,6 +28,10 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: `${recipe.title} - Family Cook`,
     description: `${recipe.description}. Время приготовления: ${recipe.prepTime + recipe.cookTime} минут. Порций: ${recipe.servings}.`,
+    keywords: recipe.keywords,
+    alternates: {
+      canonical: `https://family-cook.ru/recipes/${recipe.slug}/`,
+    },
     openGraph: {
       title: `${recipe.title} - Family Cook`,
       description: recipe.description,
@@ -67,8 +71,51 @@ export default async function RecipePage({ params }: { params: Promise<{ slug: s
     { label: recipe.title },
   ];
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Recipe",
+    name: recipe.title,
+    description: recipe.description,
+    image: `https://family-cook.ru${recipe.image}`,
+    author: {
+      "@type": "Organization",
+      name: "Family Cook",
+    },
+    prepTime: `PT${recipe.prepTime}M`,
+    cookTime: `PT${recipe.cookTime}M`,
+    totalTime: `PT${recipe.prepTime + recipe.cookTime}M`,
+    recipeYield: `${recipe.servings} порций`,
+    recipeCategory: recipe.category,
+    recipeCuisine: "Русская",
+    keywords: recipe.keywords.join(", "),
+    recipeIngredient: recipe.ingredients,
+    recipeInstructions: recipe.instructions.map((step, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text: step,
+    })),
+  };
+
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Главная", item: "https://family-cook.ru/" },
+      { "@type": "ListItem", position: 2, name: "Рецепты", item: "https://family-cook.ru/recipes/" },
+      { "@type": "ListItem", position: 3, name: recipe.title },
+    ],
+  };
+
   return (
     <div className="py-6 md:py-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       <Breadcrumbs items={breadcrumbItems} />
      
         <Image
