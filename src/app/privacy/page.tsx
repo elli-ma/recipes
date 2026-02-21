@@ -5,7 +5,10 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Политика конфиденциальности - Family Cook",
   description: "Политика конфиденциальности Family Cook. Узнайте, как мы собираем, используем и защищаем вашу персональную информацию.",
-  keywords: "политика конфиденциальности, защита данных, персональные данные, family cook",
+  robots: {
+    index: false,
+    follow: false,
+  },
 };
 
 const breadcrumbItems = [
