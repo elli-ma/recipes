@@ -10,8 +10,8 @@ for (const line of envFile.split("\n")) {
 
 const recipes = [
   {
-    slug: "syrniki-ot-zheni",
-    dish: "five thick round pan-fried cottage cheese patties (syrniki), smooth rounded soft edges, golden brown on top and bottom, creamy white inside, puffy cylinder shape, neatly arranged on the plate",
+    slug: "salat-s-pechenyu",
+    dish: "a natural soft mound of finely diced salad on the plate, all pieces are the same very small size, small brown liver cubes and small pink ham cubes evenly mixed, thin light mayonnaise dressing not too much, a few green peas, plenty of finely chopped dill scattered throughout, casual heap shape",
   },
 ];
 
