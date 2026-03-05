@@ -26,7 +26,9 @@ const YandexMetrika = () => {
               clickmap: true,
               trackLinks: true,
               accurateTrackBounce: true,
-              ecommerce: "dataLayer"
+              ecommerce: "dataLayer",
+              referrer: document.referrer,
+              url: location.href
             });
           `,
         }}
