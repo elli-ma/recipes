@@ -7,7 +7,7 @@ const YandexMetrika = () => {
     <>
       <Script
         id="yandex-metrika"
-        strategy="afterInteractive"
+        strategy="beforeInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             (function(m,e,t,r,i,k,a){
