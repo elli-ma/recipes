@@ -10,8 +10,8 @@ for (const line of envFile.split("\n")) {
 
 const recipes = [
   {
-    slug: "chaynyy-keks",
-    dish: "a whole round dark brown tea cake (loaf cake) with a cracked top, baked golden-brown crust, dense moist texture visible on the sides, with small dark berry jam pieces inside, simple homemade look",
+    slug: "yablochnyy-krambl",
+    dish: "a thin square piece of apple crumble on a plate, golden crumbly topping with walnut pieces on top, soft caramelized apple cubes visible on the bottom layer, the piece is flat and thin like a bar, next to it a round scoop of vanilla ice cream, simple and appetizing",
   },
 ];
 
