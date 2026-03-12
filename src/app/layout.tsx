@@ -15,6 +15,9 @@ const montserrat = Montserrat({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://family-cook.ru"),
+  alternates: {
+    canonical: "https://family-cook.ru/",
+  },
   title: "Family Cook - Семейные рецепты для каждого дня",
   description: "Домашние рецепты нашей большой семьи: бабушек, мамы, тёти, сестры и брата. Проверенные временем и любовью семейные традиции.",
   icons: {

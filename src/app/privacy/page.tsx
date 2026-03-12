@@ -9,6 +9,9 @@ export const metadata: Metadata = {
     index: false,
     follow: false,
   },
+  alternates: {
+    canonical: "https://family-cook.ru/privacy/",
+  },
 };
 
 const breadcrumbItems = [

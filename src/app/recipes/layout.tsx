@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: "Рецепты - Family Cook",
   description: "Просмотрите нашу коллекцию семейных рецептов. Домашняя выпечка, десерты, закуски и многое другое. Пошаговые инструкции от нашей семьи.",
   keywords: "рецепты, семейные рецепты, домашняя кухня, выпечка, десерты, family cook",
+  alternates: {
+    canonical: "https://family-cook.ru/recipes/",
+  },
 };
 
 export default function RecipesLayout({
