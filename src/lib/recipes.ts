@@ -647,7 +647,7 @@ export const recipes: Recipe[] = [
     id: 24,
     slug: "tvorozhnaya-zapekanka",
     title: "Творожная запеканка",
-    description: "Нежная творожная запеканка, как в детском саду.",
+    description: "Нежная творожная запеканка.",
     image: "/recipes/tvorozhnaya-zapekanka.webp",
     ingredients: [
       "0.5 кг творога",
