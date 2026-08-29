@@ -10,8 +10,8 @@ for (const line of envFile.split("\n")) {
 
 const recipes = [
   {
-    slug: "yablochnyy-krambl",
-    dish: "a thin square piece of apple crumble on a plate, golden crumbly topping with walnut pieces on top, soft caramelized apple cubes visible on the bottom layer, the piece is flat and thin like a bar, next to it a round scoop of vanilla ice cream, simple and appetizing",
+    slug: "testo-dlya-pelmeney",
+    dish: "a smooth round ball of firm homemade dough lightly dusted with flour, next to it a small rolled-out sheet of dough and a few freshly shaped uncooked pelmeni dumplings, simple and appetizing",
   },
 ];
 
